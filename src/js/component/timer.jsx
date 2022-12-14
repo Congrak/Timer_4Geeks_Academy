@@ -8,12 +8,10 @@ const Timer = () => {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [hours, setHours] = useState(0);
-  const [start, setStart] = useState(false)
 
   let timer
 
   useEffect(() => {
-    if (setStart) {
       timer = setInterval(() => {
         setSeconds(seconds + 1);
         if (seconds == 59) {
@@ -26,11 +24,10 @@ const Timer = () => {
           setSeconds(0);
         }
       }, 1000);
-    }
     return () => clearInterval(timer);
 
 
-  }, [start]);
+  });
 
   const reset = () => {
     setHours(0)
@@ -51,7 +48,6 @@ const Timer = () => {
       </h1>
       <button className="reset" onClick={reset}>Reset</button>
       <button className="stop" onClick={stop}>Stop</button>
-      <button className="start" onClick={() => { setStart(true) }}>Start</button>
     </div>
 
   );

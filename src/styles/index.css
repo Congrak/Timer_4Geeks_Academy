@@ -10,3 +10,45 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.timer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.stop {
+    border: 5px solid rgba(182, 4, 4, 0.518);
+    border-radius: 100%;
+    background-color: rgba(255, 0, 0, 0.628);
+    color: red;
+    font-size: small;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    margin-left:5px;
+    margin-bottom: 5px;
+}
+
+.reset {
+    border: 5px solid rgba(255, 166, 0, 0.735);
+    border-radius: 100%;
+    background-color: rgba(255, 166, 0, 0.804);
+    color: orange;
+    font-size: small;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    margin-left:5px;
+    margin-bottom: 5px;
+    text-align: center;
+    justify-content: center;
+}
+
+.stop:hover , .reset:hover {
+    color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+  transition: all 0.2s ease;
+}
